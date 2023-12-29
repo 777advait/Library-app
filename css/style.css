@@ -1,0 +1,221 @@
+:root {
+  --body: #faf5f1;
+  --secondary: #d26131;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+}
+
+body {
+  background-color: #faf5f1;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+header nav h1 {
+  color: var(--secondary);
+}
+header nav a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--secondary);
+  border: solid 2px var(--secondary);
+  padding: 0.3rem;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+main .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}
+main .modal {
+  width: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  border-radius: 8px;
+  background-color: white;
+  z-index: 10;
+}
+main .modal .close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  scale: 2.5;
+  cursor: pointer;
+}
+main .modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+main .modal form input {
+  width: 180px;
+  border: 2px solid;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-family: Inter;
+}
+main .modal form .is-read {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+main .modal form label {
+  font-size: 12px;
+}
+main .modal form input[type=checkbox] {
+  width: unset;
+}
+main .modal form input[type=submit] {
+  background: rgba(210, 97, 49, 0.8);
+  border: none;
+  font-weight: bold;
+}
+main .container {
+  padding: 20px 0;
+}
+main .btn-container {
+  display: flex;
+  justify-content: center;
+}
+main .btn-container a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  color: var(--secondary);
+  font-weight: bold;
+  font-family: Inter;
+  padding: 1rem;
+  border-radius: 8px;
+}
+main .btn-container a:hover {
+  background: white;
+}
+main .card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+main .card {
+  border-radius: 16px;
+  width: 250px;
+  background-color: white;
+  filter: drop-shadow(8px 8px 10px #dcdcdc);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+main .card .title {
+  padding-bottom: 0.5rem;
+}
+main .card .cta {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+main .card .cta a {
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 1rem;
+  width: 140px;
+  border-radius: 8px;
+  text-align: center;
+}
+main .card .cta .read-btn {
+  font-weight: bold;
+}
+main .card .cta .read {
+  background: #9fff9c;
+}
+main .card .cta .not-read {
+  background: #ff9c9c;
+}
+main .card .cta .remove {
+  background: whitesmoke;
+}
+main .card .cta .remove:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (min-width: 680px) {
+  main .modal {
+    width: 450px;
+  }
+  main .modal form input {
+    width: 250px;
+  }
+  main .modal form label {
+    font-size: 14px;
+  }
+  main .modal form input[type=submit] {
+    width: 200px;
+    font-size: 16px;
+  }
+  main .card-container {
+    max-width: 85%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+@media only screen and (min-width: 920px) {
+  main .card {
+    width: 320px;
+  }
+  main .card .cta a {
+    width: 180px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .card-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  main .card-container .card {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  main .card-container {
+    gap: 2rem;
+  }
+  main .card-container .card {
+    width: 320px;
+  }
+}/*# sourceMappingURL=style.css.map */

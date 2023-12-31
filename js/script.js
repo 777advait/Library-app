@@ -49,8 +49,9 @@ const updateBooks = () => {
 
         document.querySelector(".remove").addEventListener("click", (e) => {
             e.preventDefault();
-            console.log(e.target.parentElement.parentElement.querySelector(".title"))
-            console.log(e.target.parentElement.parentElement.querySelector(".title").textContent)
+            // e.target.parentElement.parentElement.querySelector(".title").textContent
+            myLibrary.splice(myLibrary.indexOf(myLibrary.find(book => book.title === e.target.parentElement.parentElement.querySelector(".title").textContent), 1));
+            updateBooks();
         });
     });
 };
@@ -66,7 +67,6 @@ document.querySelector("#submit").addEventListener("click", (e) => {
         readInput.checked
     ));
 
-    console.log(myLibrary);
     updateBooks();
 });
 
